@@ -15,14 +15,55 @@ The contract acts as a decentralized vault. It manages the accounting of user de
 * **Admin Control**: Initializable state to set specific lending assets (e.g., USDC, XLM).
 * **Efficient Gas Usage**: Optimized Rust code to minimize resource fees on the Stellar network.
 
-## Deployed Smart Contract Link
-**Contract ID**: `CC7...YOUR_DEPLOYED_ADDRESS_HERE`  
+## Deployed Smart Contract
+
+**Contract ID**: `CDHDZRQLZW3RSZZC5IIHKFJMRP3QNQZUQ3QD6HZPK7O5NWMZEJRZLCF`  
 **Network**: Stellar Testnet (Protocol 22+)  
-**Explorer**: [View on Stellar.Expert](https://stellar.expert/explorer/testnet/contract/YOUR_DEPLOYED_ADDRESS_HERE)
+**Explorer**: [View on Stellar.Expert](https://stellar.expert/explorer/testnet/contract/CDHDZRQLZW3RSZZC5IIHKFJMRP3QNQZUQ3QD6HZPK7O5NWMZEJRZLCF)  
+
+### Deployment Screenshot
+![Deployed Contract Screenshot](./Screenshot%202026-03-19%20150103.png)
 
 ---
 
 ### Getting Started
-1. **Build**: `cargo build --target wasm32-unknown-unknown --release`
-2. **Test**: `cargo test`
-3. **Deploy**: `soroban contract deploy --wasm target/wasm32-unknown-unknown/release/lending_bot.wasm --source your_account --network testnet`
+
+#### Prerequisites
+- Rust 1.70+ with `wasm32-unknown-unknown` target
+- Soroban CLI
+- Node.js (for testing interactions)
+
+#### Build Instructions
+```bash
+# Build the contract
+cargo build --target wasm32-unknown-unknown --release
+
+# Run tests (if any)
+cargo test
+
+# Deploy to Testnet
+soroban contract deploy --wasm target/wasm32-unknown-unknown/release/lending_bot.wasm \
+  --source YOUR_ACCOUNT_SECRET \
+  --network testnet
+```
+
+### Project Structure
+```
+lending_bot/
+├── Cargo.toml          # Package configuration
+├── src/
+│   └── lib.rs          # Smart contract implementation
+└── README.md           # Documentation
+```
+
+### Contract Methods
+
+- **`init(admin, token_id)`** - Initialize the lending pool
+- **`deposit(amount)`** - Deposit tokens into the pool
+- **`withdraw(amount)`** - Withdraw tokens from the pool
+- **`get_balance(lender)`** - Check lender's current balance
+
+---
+
+### License
+MIT License - Feel free to use this code for your projects!
