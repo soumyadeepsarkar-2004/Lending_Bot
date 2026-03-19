@@ -3,6 +3,12 @@ target/
 Cargo.lock
 **/*.rs.bk
 *.pdb
+*.rlib
+
+# Build artifacts
+wasm-pack/
+pkg/
+dist/
 
 # IDE
 .vscode/
@@ -11,7 +17,26 @@ Cargo.lock
 *.swo
 *~
 .DS_Store
+*.sublime-project
+*.sublime-workspace
 
 # Environment
 .env
 .env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+*.log
+
+# Dependencies
+node_modules/
+
+# Test coverage
+coverage/
+*.prof
+
+# Temporary files
+*.tmp
+*.bak

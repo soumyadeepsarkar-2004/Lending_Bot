@@ -1,0 +1,21 @@
+# Package files
+node_modules/
+*.lock
+Cargo.lock
+
+# Build output
+target/
+dist/
+build/
+
+# Environment
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

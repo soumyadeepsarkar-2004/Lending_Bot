@@ -29,6 +29,11 @@ The contract acts as a decentralized vault. It manages the accounting of user de
 
 ### Getting Started
 
+#### Quick Links
+- **[Development Guide](./docs/DEVELOPMENT.md)** - Setup, building, and testing
+- **[API Documentation](./docs/API.md)** - Contract methods and usage examples
+- **[Deployment Script](./scripts/deploy.sh)** - Automated deployment to testnet
+
 #### Prerequisites
 - Rust 1.70+ with `wasm32-unknown-unknown` target
 - Soroban CLI
@@ -67,14 +72,35 @@ soroban contract info --id YOUR_CONTRACT_ID --network testnet
 ```
 Lending_Bot/
 ├── contracts/
-│   └── lending_bot/
-│       ├── Cargo.toml          # Contract package configuration
-│       └── src/
-│           └── lib.rs          # Smart contract implementation
-├── README.md                   # Documentation
-├── .gitignore                  # Git ignore rules
-└── Screenshot 2026-03-19...    # Deployment proof
+│   └── lending_bot/          # Main smart contract
+│       ├── src/
+│       │   └── lib.rs        # Contract implementation
+│       ├── tests/            # Integration tests
+│       └── Cargo.toml        # Contract package config
+├── docs/
+│   ├── DEVELOPMENT.md        # Development guide
+│   └── API.md                # Contract API documentation
+├── scripts/
+│   ├── deploy.sh             # Deployment script
+│   └── test.sh               # Test runner script
+├── Cargo.toml                # Workspace root config
+├── .gitignore                # Git ignore rules
+├── .prettierignore           # Prettier ignore rules
+├── LICENSE                   # MIT License
+├── README.md                 # This file
+└── Screenshot 2026-03-19...  # Deployment proof
 ```
+
+## Directory Overview
+
+- **`contracts/`** - Smart contract implementations
+  - `lending_bot/` - The main lending protocol contract
+- **`docs/`** - Documentation
+  - `DEVELOPMENT.md` - Setup and development instructions
+  - `API.md` - Contract methods and API reference
+- **`scripts/`** - Utility scripts
+  - `deploy.sh` - Automated deployment to testnet
+  - `test.sh` - Test runner
 
 ### Contract Methods
 
