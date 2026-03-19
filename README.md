@@ -17,11 +17,10 @@ The contract acts as a decentralized vault. It manages the accounting of user de
 
 ## Deployed Smart Contract
 
-> ⚠️ **Note**: Contract addresses on Stellar Testnet may vary. Deploy your own instance using the instructions below and update the Contract ID accordingly.
-
+**Contract ID**: `CCKQU7RZS4PKK25VRZFT7HXAQJ2IX43IJMRUPMAKVKRDJGAP4GJZDRL6Q`  
 **Network**: Stellar Testnet (Protocol 22+)  
-**Contract Format**: Addresses start with `C` and are 56 characters long  
-**Example Explorer Link**: https://stellar.expert/explorer/testnet/contract/YOUR_CONTRACT_ID_HERE
+
+> **Note**: Contract addresses on Stellar Testnet may need redeployment after testnet upgrades. If the address is no longer active, follow the deployment instructions below to deploy your own instance.
 
 ### Deployment Screenshot
 ![Deployed Contract Screenshot](./Screenshot%202026-03-19%20150103.png)
@@ -37,6 +36,9 @@ The contract acts as a decentralized vault. It manages the accounting of user de
 
 #### Build Instructions
 ```bash
+# cd into the contract directory
+cd contracts/lending_bot
+
 # Build the contract
 cargo build --target wasm32-unknown-unknown --release
 
@@ -63,11 +65,15 @@ soroban contract info --id YOUR_CONTRACT_ID --network testnet
 
 ### Project Structure
 ```
-lending_bot/
-├── Cargo.toml          # Package configuration
-├── src/
-│   └── lib.rs          # Smart contract implementation
-└── README.md           # Documentation
+Lending_Bot/
+├── contracts/
+│   └── lending_bot/
+│       ├── Cargo.toml          # Contract package configuration
+│       └── src/
+│           └── lib.rs          # Smart contract implementation
+├── README.md                   # Documentation
+├── .gitignore                  # Git ignore rules
+└── Screenshot 2026-03-19...    # Deployment proof
 ```
 
 ### Contract Methods
