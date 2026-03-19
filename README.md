@@ -17,9 +17,11 @@ The contract acts as a decentralized vault. It manages the accounting of user de
 
 ## Deployed Smart Contract
 
-**Contract ID**: `CCKQU7RZS4PKK25VRZFT7HXAQJ2IX43IJMRUPMAKVKRDJGAP4GJZDRL6Q`  
+> ⚠️ **Note**: Contract addresses on Stellar Testnet may vary. Deploy your own instance using the instructions below and update the Contract ID accordingly.
+
 **Network**: Stellar Testnet (Protocol 22+)  
-**Explorer**: [View on Stellar.Expert](https://stellar.expert/explorer/testnet/contract/CCKQU7RZS4PKK25VRZFT7HXAQJ2IX43IJMRUPMAKVKRDJGAP4GJZDRL6Q)  
+**Contract Format**: Addresses start with `C` and are 56 characters long  
+**Example Explorer Link**: https://stellar.expert/explorer/testnet/contract/YOUR_CONTRACT_ID_HERE
 
 ### Deployment Screenshot
 ![Deployed Contract Screenshot](./Screenshot%202026-03-19%20150103.png)
@@ -45,6 +47,18 @@ cargo test
 soroban contract deploy --wasm target/wasm32-unknown-unknown/release/lending_bot.wasm \
   --source YOUR_ACCOUNT_SECRET \
   --network testnet
+```
+
+#### After Deployment
+
+Once deployed, you'll receive a **Contract ID**. You can verify it on Stellar.Expert:
+```
+https://stellar.expert/explorer/testnet/contract/YOUR_CONTRACT_ID
+```
+
+To interact with the contract or verify it's deployed:
+```bash
+soroban contract info --id YOUR_CONTRACT_ID --network testnet
 ```
 
 ### Project Structure
