@@ -31,8 +31,8 @@ cargo test
 
 ### Code Structure
 
-- `contracts/lending_bot/src/lib.rs` - Main contract implementation
-- `contracts/lending_bot/tests/` - Contract integration tests
+- `contracts/src/lib.rs` - Main contract implementation
+- `contracts/tests/` - Contract integration tests
 - `scripts/` - Deployment and utility scripts
 
 ## Deployment

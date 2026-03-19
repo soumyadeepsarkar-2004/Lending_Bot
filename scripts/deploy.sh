@@ -13,7 +13,6 @@ if [ -z "$SOURCE_SECRET" ]; then
 fi
 
 echo "🚀 Building Lending Bot contract..."
-cd contracts/lending_bot
 cargo build --target wasm32-unknown-unknown --release
 
 WASM_FILE="target/wasm32-unknown-unknown/release/lending_bot.wasm"
@@ -33,5 +32,3 @@ fi
 echo "✅ Contract deployed successfully!"
 echo "📄 Contract ID: $CONTRACT_ID"
 echo "🔗 View on Stellar.Expert: https://stellar.expert/explorer/$NETWORK/contract/$CONTRACT_ID"
-
-cd ../..

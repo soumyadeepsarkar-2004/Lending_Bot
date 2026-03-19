@@ -72,35 +72,29 @@ soroban contract info --id YOUR_CONTRACT_ID --network testnet
 ```
 Lending_Bot/
 ├── contracts/
-│   └── lending_bot/          # Main smart contract
-│       ├── src/
-│       │   └── lib.rs        # Contract implementation
-│       ├── tests/            # Integration tests
-│       └── Cargo.toml        # Contract package config
+│   ├── src/
+│   │   └── lib.rs        # Smart contract implementation
+│   ├── tests/            # Integration tests
+│   └── Cargo.toml        # Contract package config
 ├── docs/
-│   ├── DEVELOPMENT.md        # Development guide
-│   └── API.md                # Contract API documentation
+│   ├── DEVELOPMENT.md    # Development guide
+│   └── API.md            # Contract API documentation
 ├── scripts/
-│   ├── deploy.sh             # Deployment script
-│   └── test.sh               # Test runner script
-├── Cargo.toml                # Workspace root config
-├── .gitignore                # Git ignore rules
-├── .prettierignore           # Prettier ignore rules
-├── LICENSE                   # MIT License
-├── README.md                 # This file
-└── Screenshot 2026-03-19...  # Deployment proof
+│   ├── deploy.sh         # Deployment script
+│   └── test.sh           # Test runner script
+├── Cargo.toml            # Workspace root config
+├── .gitignore            # Git ignore rules
+├── .prettierignore       # Prettier ignore rules
+├── LICENSE               # MIT License
+├── README.md             # This file
+└── Screenshot 2026...    # Deployment proof
 ```
 
 ## Directory Overview
 
-- **`contracts/`** - Smart contract implementations
-  - `lending_bot/` - The main lending protocol contract
-- **`docs/`** - Documentation
-  - `DEVELOPMENT.md` - Setup and development instructions
-  - `API.md` - Contract methods and API reference
-- **`scripts/`** - Utility scripts
-  - `deploy.sh` - Automated deployment to testnet
-  - `test.sh` - Test runner
+- **`contracts/`** - Smart contract source code and tests
+- **`docs/`** - Documentation (development guide & API reference)
+- **`scripts/`** - Utility scripts for deployment and testing
 
 ### Contract Methods
 
