@@ -17,13 +17,16 @@ The contract acts as a decentralized vault. It manages the accounting of user de
 
 ## Deployed Smart Contract
 
-**Contract ID**: `CCKQU7RZS4PKK25VRZFT7HXAQJ2IX43IJMRUPMAKVKRDJGAP4GJZDRL6Q`  
+**Contract ID**: `CBQFQFK5G46MBFLQCM5K0MVFNEDW4UBXK7FCU40WYD5AJFJUAUT5DU7`  
 **Network**: Stellar Testnet (Protocol 22+)  
+**Status**: ✅ Active and Verified on Stellar Expert
 
 > **Note**: Contract addresses on Stellar Testnet may need redeployment after testnet upgrades. If the address is no longer active, follow the deployment instructions below to deploy your own instance.
 
 ### Deployment Screenshot
 ![Deployed Contract Screenshot](./Screenshot%202026-03-19%20150103.png)
+
+**View on Stellar Expert**: [CBQFQFK5G46MBFLQCM5K0MVFNEDW4UBXK7FCU40WYD5AJFJUAUT5DU7](https://stellar.expert/explorer/testnet/contract/CBQFQFK5G46MBFLQCM5K0MVFNEDW4UBXK7FCU40WYD5AJFJUAUT5DU7)
 
 ---
 
