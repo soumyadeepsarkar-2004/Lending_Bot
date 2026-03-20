@@ -42,7 +42,7 @@ The contract acts as a decentralized vault. It manages the accounting of user de
 #### Build Instructions
 ```bash
 # cd into the contract directory
-cd contracts/lending_bot
+cd contracts
 
 # Build the contract
 cargo build --target wasm32-unknown-unknown --release
@@ -55,6 +55,28 @@ soroban contract deploy --wasm target/wasm32-unknown-unknown/release/lending_bot
   --source YOUR_ACCOUNT_SECRET \
   --network testnet
 ```
+
+#### Frontend Setup (Optional)
+
+To set up the Next.js frontend client:
+```bash
+# Navigate to the client directory
+cd client
+
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
+```
+
+The frontend will be available at `http://localhost:3000` and allows interaction with the deployed contract.
 
 #### After Deployment
 
@@ -76,6 +98,14 @@ Lending_Bot/
 │   │   └── lib.rs        # Smart contract implementation
 │   ├── tests/            # Integration tests
 │   └── Cargo.toml        # Contract package config
+├── client/
+│   ├── app/              # Next.js application components
+│   ├── components/       # React components
+│   ├── hooks/            # Custom React hooks
+│   ├── lib/              # Utility functions
+│   ├── public/           # Static assets
+│   ├── package.json      # Frontend dependencies
+│   └── README.md         # Frontend-specific documentation
 ├── docs/
 │   ├── DEVELOPMENT.md    # Development guide
 │   └── API.md            # Contract API documentation
@@ -85,14 +115,18 @@ Lending_Bot/
 ├── Cargo.toml            # Workspace root config
 ├── .gitignore            # Git ignore rules
 ├── .prettierignore       # Prettier ignore rules
+├── CHANGELOG.md          # Project changelog
+├── CONTRIBUTING.md       # Contribution guidelines
 ├── LICENSE               # MIT License
 ├── README.md             # This file
+├── SECURITY.md           # Security policy
 └── Screenshot 2026...    # Deployment proof
 ```
 
 ## Directory Overview
 
 - **`contracts/`** - Smart contract source code and tests
+- **`client/`** - Next.js frontend application for contract interaction
 - **`docs/`** - Documentation (development guide & API reference)
 - **`scripts/`** - Utility scripts for deployment and testing
 
